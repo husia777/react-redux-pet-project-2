@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { useNeighbors } from "./use-neighbors";
-
+import styled from 'styled-components';
+import { useNeighbors } from './use-neighbors';
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -104,7 +103,8 @@ export const Info = (props) => {
     push,
   } = props;
 
-  const neighbors = useNeighbors(borders)
+  const neighbors = useNeighbors(borders);
+
   return (
     <Wrapper>
       <InfoImage src={flag} alt={name} />
@@ -131,19 +131,19 @@ export const Info = (props) => {
           </List>
           <List>
             <ListItem>
-              <b>Top Level Domain</b>{" "}
+              <b>Top Level Domain</b>{' '}
               {topLevelDomain.map((d) => (
                 <span key={d}>{d}</span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Currency</b>{" "}
+              <b>Currency</b>{' '}
               {currencies.map((c) => (
                 <span key={c.code}>{c.name} </span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Top Level Domain</b>{" "}
+              <b>Top Level Domain</b>{' '}
               {languages.map((l) => (
                 <span key={l.name}>{l.name}</span>
               ))}
