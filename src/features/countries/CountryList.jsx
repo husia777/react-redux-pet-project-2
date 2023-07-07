@@ -6,7 +6,7 @@ import { useCountries } from "./use-countries";
 export const CountryList = () => {
   const navigate = useNavigate();
 
-  const [countries, { error, status }] = useCountries;
+  const [countries, { error, status }] = useCountries();
   return (
     <>
       {error && <h2>Can't fetch data</h2>}
