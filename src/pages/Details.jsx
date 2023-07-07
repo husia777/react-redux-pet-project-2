@@ -3,10 +3,9 @@ import { IoArrowBack } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Button } from "../components/Button";
-import { Info } from "../components/Info";
-import { selectDetails } from "../store/details/details-selectors";
-import { clearDetails, loadCountryByName } from "../store/details/details-actions";
 
+import { Info } from '../features/details/Info'
+import { clearDetails, loadCountryByName, selectDetails } from "../features/details/details-slice";
 export const Details = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
